@@ -42,6 +42,7 @@ security:
 #   indexCategory  Portal navigation category. Recognized values:
 #                    connector  – connector-side APIs
 #                    core       – platform core APIs
+#                    messaging  – messaging APIs
 #                    protocol   – protocol gateway APIs
 #                  Groups without this field are not included in the portal navigation page.
 #   navLabel       Optional override for the display name used in the generated portal navigation entry.
@@ -578,6 +579,14 @@ groups:
       - com.czertainly.api.interfaces.core.web.v2.ComplianceProfileController
       - com.czertainly.api.interfaces.core.web.v2.ConnectorController
       - com.czertainly.api.interfaces.core.web.v2.OAuth2LoginController
+
+  - id: doc-openapi-messaging-time-quality
+    groupName: messaging-time-quality
+    title: Time Quality Messaging API
+    indexCategory: messaging
+    description: AMQP message contracts between Core and Time Quality Monitor
+    interfaces:
+      - com.czertainly.api.interfaces.messaging.TimeQualityMessagingController
 
   - id: doc-openapi-protocol-acme
     groupName: protocol-acme
