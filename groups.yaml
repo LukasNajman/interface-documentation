@@ -203,6 +203,20 @@ groups:
       - com.otilm.api.interfaces.connector.secrets.SecretController
       - com.otilm.api.interfaces.connector.secrets.VaultController
 
+  - id: doc-openapi-connector-signature-formatter-provider
+    groupName: connector-signature-formatter-provider
+    title: Signature Formatter Provider API
+    indexCategory: connector
+    description: REST API for implementations of custom Signature Formatter Provider
+    serverUrl: https://demo.otilm.com
+    extensions:
+      x-metrics-profile: "`com.otilm.api.interfaces.connector.common.v2.MetricsController.METRICS_CONFIG`"
+    interfaces:
+      - com.otilm.api.interfaces.connector.common.v2.HealthController
+      - com.otilm.api.interfaces.connector.common.v2.InfoController
+      - com.otilm.api.interfaces.connector.common.v2.MetricsController
+      - com.otilm.api.interfaces.connector.signing.SignatureFormatterController
+
   - id: doc-openapi-core-acme
     groupName: core-acme
     title: ACME API
@@ -448,6 +462,22 @@ groups:
     interfaces:
       - com.otilm.api.interfaces.core.web.SecretManagementController
 
+  - id: doc-openapi-core-signing-profile
+    groupName: core-signing-profile
+    title: Signing Profile API
+    indexCategory: core
+    description: REST API for managing Signing Profiles in the platform
+    interfaces:
+      - com.otilm.api.interfaces.core.web.SigningProfileController
+
+  - id: doc-openapi-core-signing-record
+    groupName: core-signing-record
+    title: Signing Record API
+    indexCategory: core
+    description: REST API for managing Signing Records in the platform
+    interfaces:
+      - com.otilm.api.interfaces.core.web.SigningRecordController
+
   - id: doc-openapi-core-time-quality-configuration
     groupName: core-time-quality-configuration
     title: Time Quality Configuration API
@@ -565,6 +595,8 @@ groups:
       - com.otilm.api.interfaces.core.web.SchedulerController
       - com.otilm.api.interfaces.core.web.SecretManagementController
       - com.otilm.api.interfaces.core.web.SettingController
+      - com.otilm.api.interfaces.core.web.SigningProfileController
+      - com.otilm.api.interfaces.core.web.SigningRecordController
       - com.otilm.api.interfaces.core.web.StatisticsController
       - com.otilm.api.interfaces.core.web.TimeQualityConfigurationController
       - com.otilm.api.interfaces.core.web.TokenInstanceController
