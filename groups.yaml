@@ -100,6 +100,21 @@ groups:
       - com.otilm.api.interfaces.connector.InfoController
       - com.otilm.api.interfaces.connector.v2.CertificateController
 
+  - id: doc-openapi-connector-authority-provider-v3
+    groupName: connector-authority-provider-v3
+    title: Authority Provider v3 API
+    indexCategory: connector
+    description: REST API for implementations of custom v3 Authority Provider
+    serverUrl: https://demo.otilm.com
+    extensions:
+      x-metrics-profile: "`com.otilm.api.interfaces.connector.common.v2.MetricsController.METRICS_CONFIG`"
+    interfaces:
+      - com.otilm.api.interfaces.connector.common.v2.HealthController
+      - com.otilm.api.interfaces.connector.common.v2.InfoController
+      - com.otilm.api.interfaces.connector.common.v2.MetricsController
+      - com.otilm.api.interfaces.connector.v3.AuthorityController
+      - com.otilm.api.interfaces.connector.v3.CertificateController
+
   - id: doc-openapi-connector-compliance-provider
     groupName: connector-compliance-provider
     title: Compliance Provider API
